@@ -1,5 +1,7 @@
 # Torchlight3
 
+Original by Botox: https://git.botox.bz/CSSZombieEscape/Torchlight3
+
 ## 0. Requirements
  * Python3.6
  * FFMPEG
