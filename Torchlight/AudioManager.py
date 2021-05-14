@@ -206,7 +206,7 @@ class AudioManager():
 				return False
 
 			if self.Torchlight().Config["AudioLimits"][str(Level)]["TotalTime"] >= 0 and \
-				if player.Storage["Audio"]["TimeUsed"] >= self.Torchlight().Config["AudioLimits"][str(Level)]["TotalTime"]:
+				player.Storage["Audio"]["TimeUsed"] >= self.Torchlight().Config["AudioLimits"][str(Level)]["TotalTime"]:
 				
 				self.Torchlight().SayPrivate(player, "You have used up all of your free time! ({0} seconds)".format(
 					self.Torchlight().Config["AudioLimits"][str(Level)]["TotalTime"]))
@@ -329,7 +329,8 @@ class AudioClip():
 
 		if str(self.Level) in self.Torchlight().Config["AudioLimits"]:
 			if self.Player.Storage:
-				if self.Player.Storage["Audio"]["TimeUsed"] >= self.Torchlight().Config["AudioLimits"][str(self.Level)]["TotalTime"]:
+				if self.Torchlight().Config["AudioLimits"][str(Level)]["TotalTime"] >= 0 and \
+				self.Player.Storage["Audio"]["TimeUsed"] >= self.Torchlight().Config["AudioLimits"][str(self.Level)]["TotalTime"]:
 					self.Torchlight().SayPrivate(self.Player, "You have used up all of your free time! ({0} seconds)".format(
 						self.Torchlight().Config["AudioLimits"][str(self.Level)]["TotalTime"]))
 				elif self.Player.Storage["Audio"]["LastUseLength"] >= self.Torchlight().Config["AudioLimits"][str(self.Level)]["MaxLength"]:
