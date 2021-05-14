@@ -1,6 +1,7 @@
 # Torchlight3
 
 Original by Botox: https://git.botox.bz/CSSZombieEscape/Torchlight3
+This is only for CS:S and Linux. You may separate the bot and game server when using this, but it's the best to run them in both server machine.
 
 ## 0. Requirements
  * Python3.6
@@ -53,7 +54,7 @@ Adapt config.json.
 Run: `python main.py`
 
 
-### Dectalk
+### Dectalk (optional)
   * Install wine
   * Run as normal user (not root)
   * Run torchlight with: `xvfb-run -a python main.py`
